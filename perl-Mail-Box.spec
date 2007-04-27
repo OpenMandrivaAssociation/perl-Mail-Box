@@ -1,16 +1,13 @@
 %define	module Mail-Box
-%define	name	perl-%{module}
-%define	version	2.065
-%define	release	1mdk
 
 Summary:	Mail-folder manager API
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:		perl-%{module}
+Version:	2.065
+Release:	%mkrel 2
 License:	GPL or Artistic
 Group:		Development/Perl
-Source:		http://search.cpan.org/CPAN/authors/id/M/MA/MARKOV/%{module}-%{version}.tar.bz2
 URL:		http://search.cpan.org/dist/%{module}/
+Source:		http://search.cpan.org/CPAN/authors/id/M/MA/MARKOV/%{module}-%{version}.tar.bz2
 # workaround perl automatic dependencies which fail to grab this one
 Provides:	perl(Mail::Message::Construct)
 BuildArch:	noarch
@@ -61,4 +58,3 @@ rm -rf %{buildroot}
 %doc ChangeLog INSTALL LICENSE README* TODO.v2
 %{_mandir}/*/*
 %{perl_vendorlib}/Mail
-
