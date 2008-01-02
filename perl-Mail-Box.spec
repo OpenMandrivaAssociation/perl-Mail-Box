@@ -23,6 +23,7 @@ BuildRequires:	perl-MIME-tools
 BuildRequires:	perl-HTML-Tree
 BuildRequires:	perl-Object-Realize-Later
 BuildRequires:	perl-HTML-Format
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 The Mail::Box folder is a modern mail-folder manager. It is written to replace
