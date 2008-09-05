@@ -2,16 +2,15 @@
 
 Summary:	Mail-folder manager API
 Name:		perl-%{module}
-Version:	2.082
-Release:	%mkrel 2
+Version:	2.083
+Release:	%mkrel 1
 License:	GPL or Artistic
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{module}/
-Source:		http://search.cpan.org/CPAN/authors/id/M/MA/MARKOV/%{module}-%{version}.tar.bz2
+Source:     http://www.cpan.org/modules/by-module/Mail/%{module}-%{version}.tar.gz
 # workaround perl automatic dependencies which fail to grab this one
 Provides:	perl(Mail::Message::Construct)
 BuildArch:	noarch
-BuildRequires:	perl-devel
 BuildRequires:	perl-Mail-MboxParser
 BuildRequires:	perl-File-Remove
 BuildRequires:	perl-MIME-Types
