@@ -2,7 +2,7 @@
 
 Summary:	Mail-folder manager API
 Name:		perl-%{module}
-Version:	2.083
+Version:	2.084
 Release:	%mkrel 1
 License:	GPL or Artistic
 Group:		Development/Perl
