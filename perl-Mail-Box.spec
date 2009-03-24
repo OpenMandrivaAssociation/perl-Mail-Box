@@ -3,7 +3,7 @@
 Summary:	Mail-folder manager API
 Name:		perl-%{module}
 Version:	2.088
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPL or Artistic
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{module}/
@@ -22,6 +22,8 @@ BuildRequires:	perl-MIME-tools
 BuildRequires:	perl-HTML-Tree
 BuildRequires:	perl-Object-Realize-Later
 BuildRequires:	perl-HTML-Format
+# not found by find-provides, in Mail/Message/Body/Delayed.pm
+Requires: perl(Object::Realize::Later)
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
