@@ -1,37 +1,40 @@
-%define	module Mail-Box
+%define	upstream_name    Mail-Box
+%define	upstream_version 2.091
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	Mail-folder manager API
-Name:		perl-%{module}
-Version:	2.090
-Release:	%mkrel 1
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{module}/
-Source:     http://www.cpan.org/modules/by-module/Mail/%{module}-%{version}.tar.gz
-# workaround perl automatic dependencies which fail to grab this one
-Provides:	perl(Mail::Message::Construct)
-BuildArch:	noarch
-BuildRequires:	perl-Mail-MboxParser
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:    http://www.cpan.org/modules/by-module/Mail/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires:	perl-File-Remove
-BuildRequires:	perl-MIME-Types
-BuildRequires:	perl-Mail-SpamAssassin
+BuildRequires:	perl-HTML-Format
+BuildRequires:	perl-HTML-Tree
 BuildRequires:	perl-Mail-IMAPClient
-BuildRequires:	perl-User-Identity
+BuildRequires:	perl-Mail-MboxParser
+BuildRequires:	perl-Mail-SpamAssassin
 BuildRequires:	perl-MailTools
 BuildRequires:	perl-MIME-tools
-BuildRequires:	perl-HTML-Tree
+BuildRequires:	perl-MIME-Types
 BuildRequires:	perl-Object-Realize-Later
-BuildRequires:	perl-HTML-Format
-# not found by find-provides, in Mail/Message/Body/Delayed.pm
+BuildRequires:	perl-User-Identity
+
+BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
+
 Requires: perl(Object::Realize::Later)
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+Provides:	perl(Mail::Message::Construct)
 
 %description
 The Mail::Box folder is a modern mail-folder manager. It is written to replace
 Mail::Folder, although it interface is different.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor < /dev/null
