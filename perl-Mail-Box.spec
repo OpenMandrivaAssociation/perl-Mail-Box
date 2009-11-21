@@ -1,5 +1,5 @@
 %define	upstream_name    Mail-Box
-%define	upstream_version 2.091
+%define upstream_version 2.092
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -27,7 +27,7 @@ BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 Requires: perl(Object::Realize::Later)
-Provides:	perl(Mail::Message::Construct)
+Provides: perl(Mail::Message::Construct)
 
 %description
 The Mail::Box folder is a modern mail-folder manager. It is written to replace
