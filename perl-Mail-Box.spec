@@ -30,8 +30,8 @@ Requires: perl(Object::Realize::Later)
 Provides: perl(Mail::Message::Construct)
 
 %description
-The Mail::Box folder is a modern mail-folder manager. It is written to replace
-Mail::Folder, although it interface is different.
+Mail::Box is a Perl CPAN package that can be used to handle and manage E-mail
+messages, mail boxes, and folders of many types.
 
 %prep
 %setup -q -n %{upstream_name}-%{upstream_version}
