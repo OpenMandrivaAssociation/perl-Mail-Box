@@ -1,5 +1,5 @@
 %define	upstream_name    Mail-Box
-%define upstream_version 2.094
+%define upstream_version 2.095
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
