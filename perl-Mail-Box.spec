@@ -1,9 +1,9 @@
 %define	upstream_name    Mail-Box
-%define upstream_version 2.095
+%define upstream_version 2.096
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary:	Mail-folder manager API
 License:	GPL+ or Artistic
