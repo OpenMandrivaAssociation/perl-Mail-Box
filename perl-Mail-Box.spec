@@ -1,7 +1,8 @@
 %define	modname	Mail-Box
-%define modver 2.114
+%define modver 2.115
 
 Summary:	Mail-folder manager API
+
 
 
 
@@ -53,6 +54,7 @@ rm -f %{buildroot}%{perl_vendorlib}/Mail/Makefile.PL
 %doc ChangeLog INSTALL LICENSE README* TODO.v2
 %{perl_vendorlib}/Mail
 %{_mandir}/man3/*
+
 
 
 
