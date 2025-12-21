@@ -14,6 +14,7 @@ Group:		Development/Perl
 Url:		https://search.cpan.org/dist/%{modname}/
 Source0:	http://www.cpan.org/modules/by-module/Mail/%{modname}-%{modver}.tar.gz
 BuildArch:	noarch
+BuildRequires:	make
 BuildRequires:	perl-File-Remove
 BuildRequires:	perl-HTML-Format
 BuildRequires:	perl-HTML-Tree
