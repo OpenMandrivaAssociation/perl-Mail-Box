@@ -1,5 +1,5 @@
 %define	modname	Mail-Box
-%define modver 2.115
+%define modver 4.02
 
 Summary:	Mail-folder manager API
 
@@ -7,12 +7,12 @@ Summary:	Mail-folder manager API
 
 
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	2
+Version:	%{modver}
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{modname}/
-Source0:	http://www.cpan.org/modules/by-module/Mail/%{modname}-%{modver}.tar.gz
+Url:		https://github.com/markov2/perl5-Mail-Box
+Source0:	https://cpan.metacpan.org/authors/id/M/MA/MARKOV/Mail-Box-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	make
 BuildRequires:	perl-File-Remove
