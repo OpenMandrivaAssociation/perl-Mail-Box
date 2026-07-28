@@ -8,7 +8,7 @@ Summary:	Mail-folder manager API
 
 Name:		perl-%{modname}
 Version:	%{modver}
-Release:	1
+Release:	2
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/markov2/perl5-Mail-Box
@@ -52,7 +52,7 @@ find %{buildroot} -type d -exec chmod 0755 {} \;
 rm -f %{buildroot}%{perl_vendorlib}/Mail/Makefile.PL
 
 %files
-%doc ChangeLog INSTALL LICENSE README* TODO.v2
+%doc ChangeLog README*
 %{perl_vendorlib}/Mail
 %{_mandir}/man3/*
 
